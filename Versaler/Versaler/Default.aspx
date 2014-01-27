@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Versaler.Default"  %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Versaler.Default" ViewStateMode="Disabled"%>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
         <h1>Hur många versaler?</h1>
-        <asp:TextBox ID="TextBox" TextMode="MultiLine" runat="server" Height="171px" Width="355px"></asp:TextBox>
+        <asp:TextBox ID="TextBox" TextMode="MultiLine" runat="server" Height="171px" Width="355px" ViewStateMode="Enabled"></asp:TextBox>
     </div>
         <asp:PlaceHolder ID="PlaceHolder" runat="server" Visible="false">
         <p>
