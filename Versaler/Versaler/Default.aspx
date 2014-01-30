@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
         <h1>Hur många versaler?</h1>
-        <asp:TextBox ID="TextBox" TextMode="MultiLine" runat="server" Height="171px" Width="355px" ViewStateMode="Enabled"></asp:TextBox>
+        <asp:TextBox ID="TextBox" TextMode="MultiLine" runat="server"></asp:TextBox>
     </div>
         <asp:PlaceHolder ID="PlaceHolder" runat="server" Visible="false">
         <p>
@@ -22,7 +22,7 @@
         </p>
             </asp:PlaceHolder>
         <p>
-        <asp:Button ID="Button" runat="server" Text="Bestäm hur många versaler" OnClick="Button_Click"  Visible="true"/>
+        <asp:Button ID="Button" runat="server" Text="Bestäm hur många versaler" OnClick="Button_Click"/>
         </p>
         
     </form>

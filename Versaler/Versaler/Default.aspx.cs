@@ -11,18 +11,17 @@ namespace Versaler
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            TextBox.Focus();
 
         }
 
         protected void Button_Click(object sender, EventArgs e)
         {
-
-            if (TextBox.Enabled)
+            if (TextBox.Text != "")
             {
                 // Då svaret presenteras ska det inte vara möjligt att ändra i textfältet.
                 TextBox.Enabled = false;
                 string text = TextBox.Text;
-                // Formuläret skickas tillbaka (”postback”) och texten analyseras för att bestämma antalet versaler.
                 int capital = Model.TextAnalyzer.GetNumberOfCapitals(text);
                 Label.Text = capital.ToString();
                 // Gömma placeholder som innehåller Label.
@@ -32,25 +31,6 @@ namespace Versaler
                 //Ersätter textens namn till Rensa .
                 Button.Text = "Rensa";
             }
-            else
-            {
-                // Tomma texten.
-                TextBox.Text = "";
-                TextBox.Enabled = true;
-                PlaceHolder.Visible = false;
-                Label.Visible = false;
-                Button.Text = "Räkna antal versaler";
-            }
-            
-            
-            
-
-            
-            
-            
-            
-            
-
         }
     }
-}
+} 
